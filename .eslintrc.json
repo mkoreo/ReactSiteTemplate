@@ -1,0 +1,76 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "plugin:import/recommended",
+        "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // Making life easier
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "max-len": "off",
+        "no-plusplus": "off",
+        "react/prop-types": "off",
+        "import/prefer-default-export": "off",
+        "react/function-component-definition": "off",
+
+        // Indent with 4 spaces
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+
+        // Disable the base rule as they're replaced by TS rules to prevent errors
+        "no-use-before-define": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "error",
+        "@typescript-eslint/no-unused-vars": "warn",
+
+        // Webpack resolves extensions automatically.
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "mjs": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+
+        // Webpack resolves React automatically, no need to import it.
+        "react/react-in-jsx-scope": "off",
+
+        // Allow JSX in TSX files.
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "build",
+        "dist",
+        "public"
+      ],
+      "settings": {
+        "import/resolver": {
+            "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+          }
+      }
+}

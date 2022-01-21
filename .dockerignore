@@ -1,0 +1,14 @@
+dist
+node_modules
+scripts
+.dockerignore
+.eslintrc.json
+.gitignore
+docker-compose*
+Dockerfile*
+README.md
+LICENSE
+.vscode
+.next
+*.swp
+
