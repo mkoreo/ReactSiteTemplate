@@ -12,7 +12,7 @@ export default {
     // Resolve extensions and aliases
     resolve: {
         modules: [path.join(import.meta.url, 'src'), 'node_modules'],
-        extensions: ['*', '.js', '.jsx', '.css', '.ts', '.tsx'],
+        extensions: ['*', '.mjs', '.js', '.jsx', '.css', '.ts', '.tsx'],
     },
 
     plugins: [
