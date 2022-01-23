@@ -1,13 +1,28 @@
 {
+    // Make sure webpack references local files and not using the webpack:/// protocol, otherwise breakpoints won't be hit.
+    // Sourcemaps must also be correctly generated
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Launch Chrome",
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
+            "webRoot": "${workspaceRoot}/dist",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}",
-            "runtimeExecutable": "custom"
+            "skipFiles": [
+                "node_modules/**"
+            ],
         },
+        {
+            "name": "Launch Firefox",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "webRoot": "${workspaceFolder}/dist",
+            "url": "http://localhost:3000",
+            "skipFiles": [
+                "node_modules/**"
+            ],
+        }
     ]
 }

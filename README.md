@@ -1,15 +1,13 @@
 # ReactSiteTemplate (Typescript)
 
-Template for new react site.
+Configurable template for a new typescript react site.
+
 Using:
-- Webpack
-- Typescript
+- TSC
+- Webpack 5
 - Babel
 - Docker
-
-Supports:
-- Node debugging
-- Build multi-stage docker image ready to serve static content
+- VSCode Debug (Chrome & Firefox)
 
 Todo:
 - Add Jest Tests

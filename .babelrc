@@ -5,8 +5,8 @@
             "corejs": "3",
             "targets": {
                 "browsers": [
-                    "last 5 versions",
-                    "ie >= 8"
+                    "last 3 versions"
+                    //"ie >= 11"
                 ]
             }
         }]
