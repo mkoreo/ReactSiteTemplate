@@ -3,6 +3,7 @@ import path from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+/** @type {import('webpack').Configuration} */
 export default {
     plugins: [
         new HtmlWebpackPlugin({
